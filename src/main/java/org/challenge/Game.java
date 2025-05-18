@@ -31,7 +31,7 @@ public class Game {
         int draws = 0;
 
         for (int currentRound = 1; currentRound <= numOfRounds; currentRound++) {
-            System.out.printf("%n Round %d/%d %n", currentRound, numOfRounds);
+            System.out.printf("%n Round %d/%d: %n", currentRound, numOfRounds);
 
             Move playerMove = playerInput.getPlayerMove();
             Move computerMove = computerMoveGenerator.generateComputerMove();
@@ -42,6 +42,7 @@ public class Game {
                 case LOSE -> computerWins++;
                 case DRAW -> draws++;
             }
+            System.out.printf("Player Move: %s, Computer Move: %s, Result: %s%n", playerMove, computerMove, result);
         }
         System.out.printf("%n Final Results: WIN:%d LOSE:%d DRAW:%d %n", playerWins, computerWins, draws);
     }
