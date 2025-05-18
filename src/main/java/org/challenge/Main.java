@@ -4,6 +4,7 @@ import org.challenge.computer.ComputerMoveGenerator;
 import org.challenge.computer.ComputerMoveGeneratorImpl;
 import org.challenge.evulator.MoveEvaluator;
 import org.challenge.evulator.MoveEvaluatorImpl;
+import org.challenge.game.Game;
 import org.challenge.input.PlayerInput;
 import org.challenge.input.PlayerInputImpl;
 
