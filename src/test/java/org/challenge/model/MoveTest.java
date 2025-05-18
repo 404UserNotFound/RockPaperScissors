@@ -1,7 +1,5 @@
-package org.challenge;
+package org.challenge.model;
 
-import org.challenge.model.Move;
-import org.challenge.model.Result;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
