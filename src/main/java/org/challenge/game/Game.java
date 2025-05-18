@@ -1,16 +1,27 @@
-package org.challenge;
+package org.challenge.game;
 
 import org.challenge.computer.ComputerMoveGenerator;
 import org.challenge.evulator.MoveEvaluator;
 import org.challenge.input.PlayerInput;
 import org.challenge.model.Move;
 import org.challenge.model.Result;
+import org.challenge.model.GameResult;
 
 public class Game {
     private final PlayerInput playerInput;
     private final ComputerMoveGenerator computerMoveGenerator;
     private final MoveEvaluator moveEvaluator;
     private final int numOfRounds;
+    private GameResult result;
+
+    /**
+     * Constructs a new Game instance.
+     *
+     * @param playerInput           the player's input
+     * @param computerMoveGenerator the computer's generated move
+     * @param moveEvaluator         the evaluator to determine the result of a round
+     * @param numOfRounds           the number of rounds to play
+     */
 
     public Game(
             PlayerInput playerInput,
@@ -18,11 +29,14 @@ public class Game {
             MoveEvaluator moveEvaluator,
             int numOfRounds
     ) {
-
+        if (numOfRounds <= 0) {
+            throw new IllegalArgumentException("Number of rounds must be greater than 0.");
+        }
         this.playerInput = playerInput;
         this.computerMoveGenerator = computerMoveGenerator;
         this.moveEvaluator = moveEvaluator;
         this.numOfRounds = numOfRounds;
+        this.result = new GameResult(0, 0, 0);
     }
 
     public void start() {
@@ -44,6 +58,17 @@ public class Game {
             }
             System.out.printf("Player Move: %s, Computer Move: %s, Result: %s%n", playerMove, computerMove, result);
         }
-        System.out.printf("%n Final Results: WIN:%d LOSE:%d DRAW:%d %n", playerWins, computerWins, draws);
+        this.result = new GameResult(playerWins, computerWins, draws);
+        System.out.printf("%n Final Results: WIN:%d LOSE:%d DRAW:%d %n",
+                result.playerWins(),
+                result.computerWins(),
+                result.draws());
+    }
+
+    public GameResult getResult() {
+        if (result == null) {
+            throw new IllegalStateException("Game not yet started.");
+        }
+        return result;
     }
 }
