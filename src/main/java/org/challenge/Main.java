@@ -19,6 +19,8 @@ public class Main {
         ComputerMoveGenerator computerMove = new ComputerMoveGeneratorImpl();
         MoveEvaluator moveEvaluator = new MoveEvaluatorImpl();
 
+        Game game = new Game(playerInput, computerMove, moveEvaluator, numOfRounds);
+        game.start();
     }
 
     private static int validateNumOfRounds(Scanner scanner) {
