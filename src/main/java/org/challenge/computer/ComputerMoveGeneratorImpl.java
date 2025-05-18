@@ -4,7 +4,7 @@ import org.challenge.model.Move;
 
 import java.util.Random;
 
-public class ComputerMoveGeneratorImpl implements ComputerMoveGenerator {
+public final class ComputerMoveGeneratorImpl implements ComputerMoveGenerator {
     private final Random random;
 
     public ComputerMoveGeneratorImpl() {

@@ -2,7 +2,7 @@ package org.challenge.computer;
 
 import org.challenge.model.Move;
 
-public interface ComputerMoveGenerator {
+public sealed interface ComputerMoveGenerator permits ComputerMoveGeneratorImpl {
     /**
      * Generates a randomised move for the computer.
      *
