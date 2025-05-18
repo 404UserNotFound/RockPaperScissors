@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome, please input how many rounds you would like to play: ");
+        System.out.printf("%nWelcome, please input how many rounds you would like to play: ");
         int numOfRounds = validateNumOfRounds(scanner);
 
         PlayerInput playerInput = new PlayerInputImpl(scanner);
