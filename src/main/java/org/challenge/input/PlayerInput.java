@@ -2,7 +2,7 @@ package org.challenge.input;
 
 import org.challenge.model.Move;
 
-public sealed interface PlayerInput permits PlayerInputImpl {
+public interface PlayerInput {
     /**
      * Gets player's input.
      * @return player's move

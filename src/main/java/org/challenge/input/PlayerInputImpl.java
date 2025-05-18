@@ -4,7 +4,7 @@ import org.challenge.model.Move;
 
 import java.util.Scanner;
 
-public final class PlayerInputImpl implements PlayerInput {
+public class PlayerInputImpl implements PlayerInput {
     private final Scanner scanner;
 
     public PlayerInputImpl(Scanner scanner) {
