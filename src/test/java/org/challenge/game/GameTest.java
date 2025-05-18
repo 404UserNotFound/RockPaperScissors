@@ -11,12 +11,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GameTest {
+class GameTest {
     @Test
     void gameComputesCorrectResults() {
         List<Move> playerMoves = List.of(Move.PAPER, Move.PAPER, Move.SCISSORS);
         List<Move> computerMoves = List.of(Move.SCISSORS, Move.ROCK, Move.SCISSORS);
-
         final int[] index = {0};
 
         PlayerInput playerInput = () -> playerMoves.get(index[0]);
