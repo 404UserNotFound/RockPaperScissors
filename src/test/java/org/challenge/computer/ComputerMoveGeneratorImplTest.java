@@ -9,10 +9,10 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ComputerMoveGeneratorImplTest {
+class ComputerMoveGeneratorImplTest {
 
     @Test
-    public void allGeneratedMovesAreValid() {
+    void allGeneratedMovesAreValid() {
         ComputerMoveGeneratorImpl computerMoveGenerator = new ComputerMoveGeneratorImpl();
 
         for (int i = 0; i < 100; i++) {
@@ -22,7 +22,7 @@ public class ComputerMoveGeneratorImplTest {
     }
 
     @Test
-    public void allPossibleMovesAreGeneratedOverTime() {
+    void allPossibleMovesAreGeneratedOverTime() {
         ComputerMoveGeneratorImpl computerMoveGenerator = new ComputerMoveGeneratorImpl();
         Set<Move> movesAlreadySeen = EnumSet.noneOf(Move.class);
 

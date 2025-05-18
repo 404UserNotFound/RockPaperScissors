@@ -7,21 +7,21 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MoveEvaluatorImplTest {
+class MoveEvaluatorImplTest {
     private final MoveEvaluatorImpl moveEvaluator = new MoveEvaluatorImpl();
 
     @Test
-    public void playerWinsWithRockAgainstScissors() {
+    void playerWinsWithRockAgainstScissors() {
         assertEquals(Result.WIN, moveEvaluator.evaluateResult(Move.ROCK, Move.SCISSORS));
     }
 
     @Test
-    public void playerLosesWithPaperAgainstScissors() {
+    void playerLosesWithPaperAgainstScissors() {
         assertEquals(Result.LOSE, moveEvaluator.evaluateResult(Move.PAPER, Move.SCISSORS));
     }
 
     @Test
-    public void playerDrawsWithRockAgainstRock() {
+    void playerDrawsWithRockAgainstRock() {
         assertEquals(Result.DRAW, moveEvaluator.evaluateResult(Move.ROCK, Move.ROCK));
     }
 }

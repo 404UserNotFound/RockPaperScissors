@@ -19,7 +19,7 @@ public class PlayerInputImpl implements PlayerInput {
             try {
                 return Move.valueOf(moveInput);
             } catch (IllegalArgumentException e) {
-                System.out.printf("%n Your move %s was invalid, please try again.", moveInput);
+                System.out.printf("%n Your move %s was invalid, please try again.%n", moveInput);
             }
         }
     }

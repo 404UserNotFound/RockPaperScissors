@@ -4,25 +4,25 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MoveTest {
+class MoveTest {
 
     @Test
-    public void rockBeatsScissors() {
+    void rockBeatsScissors() {
         assertTrue(Move.ROCK.winCondition(Move.SCISSORS));
     }
 
     @Test
-    public void paperBeatsRock() {
+    void paperBeatsRock() {
         assertTrue(Move.PAPER.winCondition(Move.ROCK));
     }
 
     @Test
-    public void scissorsBeatsPaper() {
+    void scissorsBeatsPaper() {
         assertTrue(Move.SCISSORS.winCondition(Move.PAPER));
     }
 
     @Test
-    public void paperDrawsWithPaper() {
+    void paperDrawsWithPaper() {
         assertEquals(Result.DRAW, Move.PAPER.compareMoves(Move.PAPER));
     }
 
