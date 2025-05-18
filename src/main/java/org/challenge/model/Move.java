@@ -7,9 +7,9 @@ public enum Move {
 
     public boolean winCondition(Move move) {
         return switch (this) {
-            case ROCK -> move == Move.ROCK;
-            case PAPER -> move == Move.PAPER;
-            case SCISSORS -> move == Move.SCISSORS;
+            case ROCK -> move == Move.SCISSORS;
+            case PAPER -> move == Move.ROCK;
+            case SCISSORS -> move == Move.PAPER;
         };
     }
 
